@@ -1,0 +1,7 @@
+com\dbi\shyam\model\Project.class
+com\dbi\shyam\serviceImpl\ProjectServiceImpl.class
+com\dbi\shyam\eurekaserver\EurekaServerApplication.class
+com\dbi\shyam\dao\ProjectRepository.class
+com\dbi\shyam\app\ProjectMicroserviceApplication.class
+com\dbi\shyam\controller\ProjectRestController.class
+com\dbi\shyam\service\ProjectService.class

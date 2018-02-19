@@ -1,0 +1,18 @@
+package com.dbi.shyam.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.shyam.springboot.model.Employee;
+
+@Repository("employeeRepository")
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+
+	// @Query("SELECT e FROM employee e WHERE e.id = :id AND e.userId =:
+	// userId")
+	// Employee findOne(@Param("id") Long id, @Param("userId") Long userId);
+	//
+	// @Query("SELECT e FROM employee e WHERE e.userId =: userId")
+	// List<Employee> findAll(@Param("userId") Long userId);
+
+}

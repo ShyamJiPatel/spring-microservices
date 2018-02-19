@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;zuul-microservice&apos;&#x0D;&#x0A;- Original project: &apos;zuul-microservice&apos;&#x0D;&#x0A;- Original element: &apos;zuul-microservice/src/test/java/com.dbi.shyam.zuulmicroservice&apos;" description="Delete element" element1="/src\/test\/java&lt;com.dbi.shyam.zuulmicroservice" element2="/src\/test\/java&lt;com.dbi.shyam" element3="/src\/test\/java&lt;com.dbi" element4="/src\/test\/java&lt;com" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1516777938416" subPackages="false" version="1.0"/>
+</session>

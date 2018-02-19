@@ -1,0 +1,64 @@
+package com.dbi.shyam.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.dbi.shyam.dao.EmployeeRepository;
+import com.dbi.shyam.model.Employee;
+import com.dbi.shyam.service.EmployeeService;
+
+@Service("employeeService")
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	@Transactional
+	public Employee findById(Long id) {
+		return employeeRepository.findOne(id);
+	}
+
+	@Transactional
+	public void saveEmployee(Employee emp) {
+		employeeRepository.save(emp);
+	}
+
+	@Transactional
+	public void updateEmployee(Employee emp) {
+		employeeRepository.save(emp);
+	}
+
+	@Transactional
+	public void deleteemployeeById(Long id) {
+		employeeRepository.delete(id);
+	}
+
+	@Transactional
+	public Iterable<Employee> findAllEmployees() {
+		return employeeRepository.findAll();
+	}
+
+	@Transactional
+	public void deleteAllEmployees() {
+		employeeRepository.deleteAll();
+	}
+
+	@Transactional
+	public boolean isEmployeeExist(Long id) {
+		return employeeRepository.exists(id);
+	}
+
+	@Override
+	public Employee findByProjectName(String projectName) {
+		return employeeRepository.findOneByProjectName(projectName);
+	}
+
+	@Override
+	public List<String> findAllByProjectName(String projectName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

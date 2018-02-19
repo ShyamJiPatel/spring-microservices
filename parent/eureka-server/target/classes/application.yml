@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 6000
+      
+zuul:
+  prefix: /api
+  routes:
+    emp-service:
+      path: /emp-service/**
+      url: http://localhost:8301
+    project-service:
+      path: /project-service/**
+      url: http://localhost:8302
+  

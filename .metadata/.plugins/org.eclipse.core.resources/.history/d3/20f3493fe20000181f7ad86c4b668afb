@@ -1,0 +1,17 @@
+package com.shyam.springboot.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.shyam.springboot.model.Project;
+
+@Repository("projectRepository")
+public interface ProjectRepository extends JpaRepository<Project, Long> {
+	
+	// @Query("SELECT e FROM project e WHERE e.id = :id AND e.userId =: userId")
+	// Project findOne(@Param("id") Long id, @Param("userId") Long userId);
+	//
+	// @Query("SELECT e FROM project e WHERE e.userId =: userId")
+	// List<Project> findAll(@Param("userId") Long userId);
+
+}

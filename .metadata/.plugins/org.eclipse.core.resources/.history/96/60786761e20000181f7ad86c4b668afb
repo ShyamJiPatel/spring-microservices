@@ -1,0 +1,60 @@
+package com.shyam.springboot.serviceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.shyam.springboot.dao.UserRepository;
+import com.shyam.springboot.model.User;
+import com.shyam.springboot.service.UserService;
+
+@Service("userService")
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Override
+	public User findById(Long id) {
+		return userRepository.findOne(id);
+	}
+
+	@Override
+	@Transactional
+	public void saveUser(User emp) {
+		userRepository.save(emp);
+	}
+
+	@Override
+	@Transactional
+	public void updateUser(User emp) {
+		userRepository.save(emp);
+	}
+
+	@Override
+	@Transactional
+	public void deleteuserById(Long id) {
+		userRepository.delete(id);
+	}
+
+	@Override
+	public Iterable<User> findAllUsers() {
+		return userRepository.findAll();
+	}
+
+	@Override
+	@Transactional
+	public void deleteAllUsers() {
+		userRepository.deleteAll();
+	}
+
+	@Override
+	public boolean isUserExist(Long id) {
+		return userRepository.exists(id);
+	}
+
+	@Override
+	public User getUser(String email, String pwd) {
+		return userRepository.findByEmailAndPwd(email, pwd);
+	}
+}
